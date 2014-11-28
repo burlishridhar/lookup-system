@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import lookup.domain.Category;
+import lookup.domain.CategoryItem;
 import lookup.domain.User;
 
 public class TransformUtil {
@@ -113,5 +114,55 @@ public class TransformUtil {
 		return category;
 	}
 	
-	
+	/*
+	 * Result Set to List of Category Item
+	 * */
+	public static List<CategoryItem> convertToListCategoryItem(ResultSet rs){
+		List<CategoryItem> list = null;
+		try{
+			rs.beforeFirst();
+			list = new ArrayList<CategoryItem>();
+			while(rs.next()){
+				CategoryItem categoryItem = new CategoryItem();
+				categoryItem.setId(rs.getInt("id"));
+				categoryItem.setCategoryID(rs.getInt("categoryId"));
+				categoryItem.setName(rs.getString("name"));
+				categoryItem.setUserID(rs.getInt("userid"));
+				
+				list.add(categoryItem);
+			}
+		}catch(Exception e){
+				log.info("Exception Occured");
+	            log.info("Class Name: TransformUtil");
+	            log.info("Method: convertToListUser()");
+	            log.info("Message: ");
+	            log.info(e.getMessage());
+		}
+		
+		return list;
+	}
+
+	/*
+	 * Result Set to Category Item
+	 * */
+	public static CategoryItem convertToCategoryItem(ResultSet rs){
+		CategoryItem categoryItem = null;
+		try{
+				rs.beforeFirst(); rs.next();
+				categoryItem = new CategoryItem();
+				categoryItem.setId(rs.getInt("id"));
+				categoryItem.setCategoryID(rs.getInt("categoryId"));
+				categoryItem.setName(rs.getString("name"));
+				categoryItem.setUserID(rs.getInt("userid"));
+								
+		}catch(Exception e){
+				log.info("Exception Occured");
+	            log.info("Class Name: TransformUtil");
+	            log.info("Method: convertToUser()");
+	            log.info(e.getMessage());
+		}
+		
+		return categoryItem;
+	}
+
 }
