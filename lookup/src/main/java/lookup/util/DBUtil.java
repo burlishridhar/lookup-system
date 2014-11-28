@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -57,7 +58,7 @@ public class DBUtil {
 	 * Method to execute a select query and return the results
 	 * Returns null if the result set is empty
 	 * */
-	public ResultSet executeSelect(String sqlStr, ArrayList<String> args){
+	public ResultSet executeSelect(String sqlStr, List<String> args){
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {

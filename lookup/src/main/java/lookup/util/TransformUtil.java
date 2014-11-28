@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 import lookup.domain.Category;
 import lookup.domain.CategoryItem;
+import lookup.domain.Review;
 import lookup.domain.User;
 
 public class TransformUtil {
@@ -165,4 +166,61 @@ public class TransformUtil {
 		return categoryItem;
 	}
 
+	/*
+	 * Result Set to List of Review
+	 * */
+	public static List<Review> convertToListReview(ResultSet rs){
+		List<Review> list = null;
+		try{
+			rs.beforeFirst();
+			list = new ArrayList<Review>();
+			while(rs.next()){
+				Review review = new Review();
+				review.setId(rs.getInt("id"));
+				review.setCategoryItemID(rs.getInt("categoryitemid"));
+				review.setRating(rs.getInt("rating"));
+				review.setComment(rs.getString("comment"));
+				review.setUserID(rs.getInt("userid"));
+				review.setCreatedDate(rs.getDate("created_date"));
+				
+				list.add(review);
+			}
+		}catch(Exception e){
+				log.info("Exception Occured");
+	            log.info("Class Name: TransformUtil");
+	            log.info("Method: convertToListUser()");
+	            log.info("Message: ");
+	            log.info(e.getMessage());
+		}
+		
+		return list;
+	}
+	
+	/*
+	 * Result Set to  Review
+	 * */
+	public static Review convertToReview(ResultSet rs){
+		Review review = null;
+		try{
+				rs.beforeFirst(); rs.next();
+				review = new Review();
+				review.setId(rs.getInt("id"));
+				review.setCategoryItemID(rs.getInt("categoryitemid"));
+				review.setRating(rs.getInt("rating"));
+				review.setComment(rs.getString("comment"));
+				review.setUserID(rs.getInt("userid"));
+				review.setCreatedDate(rs.getDate("created_date"));
+								
+		}catch(Exception e){
+				log.info("Exception Occured");
+	            log.info("Class Name: TransformUtil");
+	            log.info("Method: convertToUser()");
+	            log.info(e.getMessage());
+		}
+		
+		return review;
+	}
+	
+	
+	
 }

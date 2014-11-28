@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.26" errors="0" skipped="0" tests="7" name="lookup.repository.implementation.CategoryItemRepositoryImplementationTest">
+<testsuite failures="0" time="0.219" errors="0" skipped="0" tests="7" name="lookup.repository.implementation.CategoryItemRepositoryImplementationTest">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64"/>
@@ -24,7 +24,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/shridhar/workspace/DEV_2/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf7432424528541810159.tmp"/>
+    <property name="classworlds.conf" value="/home/shridhar/workspace/DEV_2/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf4944061600321529162.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,11 +60,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.002" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetAllCategoryItems"/>
-  <testcase time="0.007" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByCategory"/>
-  <testcase time="0.008" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByName"/>
-  <testcase time="0.008" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByUser"/>
-  <testcase time="0.009" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByID"/>
-  <testcase time="0.16" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testSaveCategoryItem"/>
-  <testcase time="0.066" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testUpdateCategoryItem"/>
+  <testcase time="0.007" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetAllCategoryItems"/>
+  <testcase time="0.005" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByCategory"/>
+  <testcase time="0.006" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByName"/>
+  <testcase time="0.007" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByUser"/>
+  <testcase time="0.006" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testGetCategoryItemByID"/>
+  <testcase time="0.144" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testSaveCategoryItem"/>
+  <testcase time="0.044" classname="lookup.repository.implementation.CategoryItemRepositoryImplementationTest" name="testUpdateCategoryItem"/>
 </testsuite>
